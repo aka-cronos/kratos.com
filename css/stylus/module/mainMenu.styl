@@ -5,8 +5,12 @@
   list-style none
   
   &-item
+    position relative
     margin-left 4.5rem
-  
+    
+    &:hover .mainMenu-dropdown
+      display block
+      
   &-link
     padding 2.5rem .5rem
     display block
@@ -15,6 +19,34 @@
     font-size 1.125rem
     font-weight 700
     transition 350ms all ease-in-out
+    
     &.active
     &:hover
       color $dark-grey
+      
+  &-dropdown
+    position absolute
+    display none
+    min-width 200px
+    background-color rgba($dark-grey, .8)
+    padding 1rem
+    list-style none
+
+  &-dropdownItem
+    width auto
+    margin-bottom .5rem
+    
+    &:last-child
+      margin-bottom 0
+    
+  &-dropdownLink
+    display block
+    color $yellow
+    font-size .8rem
+    font-weight 600
+    text-transform uppercase
+    text-decoration none
+    transition 350ms all ease-in-out
+    
+    &:hover
+      color white

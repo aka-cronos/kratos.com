@@ -1,0 +1,32 @@
+.sectionHeader
+  display flex
+  height 353px
+  align-items flex-end
+  
+  &.long-products
+    background url('/img/products/header01.jpg') center no-repeat
+    background-size cover
+
+.headerDescription
+  display flex
+  align-items flex-end
+  padding 2.5rem 6rem
+  height 250px
+  background-color rgba(white, .7)
+      
+  &-title
+    position relative
+    margin 0
+    font-size 1.75rem
+    color $dark-grey
+    font-weight 400
+    text-transform uppercase
+    line-height 1
+    
+    &:before
+      position absolute
+      top -2.5rem
+      content url('/img/logo-small__yellow.png')
+
+    span
+      font-weight 700

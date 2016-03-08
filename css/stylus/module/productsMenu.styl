@@ -1,0 +1,26 @@
+.productsMenu
+  wrapped()
+  display flex
+  align-items flex-end
+  padding-top 2rem
+  padding-bottom 2rem
+  border-bottom 1px solid rgba($light-grey, .5)
+  background-color white
+  
+  &-item
+    lost-column 1/6 6 flex
+    display block
+    padding-bottom .5rem
+    font-weight 700
+    line-height 1
+    text-transform uppercase
+    text-align center
+    text-decoration none
+    color $grey
+    border-bottom 5px solid rgba(@color, .5)
+    transition 350ms all ease-in-out
+    
+    &.active
+    &:hover
+      color $yellow
+      border-bottom 5px solid @color
