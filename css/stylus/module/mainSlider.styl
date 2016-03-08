@@ -1,0 +1,34 @@
+.mainSlider
+  height 500px
+  
+  &-slide
+    &-01
+      background url('/img/mainSlide01.jpg') center no-repeat
+      background-size cover
+
+  &-slideInfo
+    position absolute
+    bottom 0
+    left 0
+    max-width 500px
+    background-color rgba($yellow, .7)
+    color white
+    text-transform uppercase
+    
+  &-title
+    position relative
+    padding 2.5rem 6rem 1rem
+    font-size 1.75rem
+    line-height 1
+    &:before
+      position absolute
+      top 0
+      content url('/img/logo__mainSlider.png')
+    
+  &-link
+    display block
+    padding 1rem 0 1rem 6rem
+    color inherit
+    text-decoration none
+    font-weight 600
+    background-color $dark-grey

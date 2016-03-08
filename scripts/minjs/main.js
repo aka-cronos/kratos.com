@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".mainSlider").unslider({autoplay:!0,nav:!0,arrows:!1})});

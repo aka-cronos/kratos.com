@@ -1,0 +1,32 @@
+{
+  "name": "kratos.com",
+  "version": "1.0.0",
+  "description": "Corporate site for Kratos",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aka-cronos/kratos.com.git"
+  },
+  "author": "Jorge Escamilla a.k.a. Cronos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aka-cronos/kratos.com/issues"
+  },
+  "homepage": "https://github.com/aka-cronos/kratos.com#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-stylus": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "autoprefixer": "^6.0.3",
+    "lost": "^6.6.2",
+    "rucksack-css": "^0.8.5",
+    "rupture": "^0.6.1"
+  }
+}
