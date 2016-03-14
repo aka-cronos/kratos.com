@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".mainSlider").unslider({autoplay:!0,nav:!0,arrows:!1})});
+$(document).ready(function(){$(".mainSlider").unslider({autoplay:!0,delay:6e3,nav:!0,arrows:!1})});

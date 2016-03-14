@@ -1,9 +1,10 @@
 .productsList
   &-title
+    display inline-block
     padding .3rem 2.5rem
-    margin-top 0
     margin-bottom 1rem
     color white
+    text-decoration none
     font-size 1.25rem
     font-weight 700
     line-height 1
@@ -17,3 +18,8 @@
     padding-left 2.5rem
     text-decoration none
     color $dark-grey
+    transition 300ms all ease-in-out
+    
+    &.active
+    &:hover
+        color $yellow

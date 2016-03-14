@@ -8,12 +8,21 @@ footer
   align-items center
   justify-content space-between
   
+  +below($tablet)
+    flex-direction column
+  
   &-item
     margin-right 2rem
     margin-left 2rem
     text-decoration none
     color $dark-grey
     font-weight 600
+    
+    +below($tablet)
+      display block
+      text-align center
+      font-size 1.25rem
+      margin-bottom 1rem
     
 .footer-tel
   position relative
@@ -34,6 +43,9 @@ footer
   text-align center
   color $light-grey
   border-top 1px solid rgba($light-grey, .5)
+  
+  +below($desktop)
+    wrapped(90%)
   
   a
     color inherit
