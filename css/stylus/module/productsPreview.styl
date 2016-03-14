@@ -20,7 +20,9 @@
 
 .productsPreview__home
   display flex
-  clear fix
+  
+  +below($mobile)
+    flex-direction column
   
   &-item
     lost-column 1/6 6 flex
@@ -30,17 +32,23 @@
     text-decoration none
     color $dark-grey
     font-weight 700
-    
+        
     img
       display block
       width 100%
+      
+    +below($mobile)
+      lost-column 1 1 flex
+      
+      img
+        display none
       
   &-all
     display flex
     flex-direction column
     align-items center
     justify-content center
-    font-size 2rem
+    font-size responsive 1rem 2rem
     text-transform uppercase
     
     p

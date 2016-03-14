@@ -1,5 +1,38 @@
+// slides dots
+.unslider-nav
+  position absolute
+  top 60%
+  transform translateY(-50%)
+  right 6rem
+  
+  +below($tablet)
+    display none
+
+  & ol
+    list-style none
+
+    & li
+      display block
+      margin-bottom 1rem
+      width 10px
+      height 10px
+      border-radius 50%
+      background white
+      text-indent -999em
+      cursor pointer
+      
+      &last-child
+        margin-bottom 0
+
+      &.unslider-active
+        background-color $yellow
+        cursor default
+        
 .mainSlider
   height 500px
+  
+  +below($mobile)
+    height 90vh
   
   &-slide
     &-01
@@ -15,11 +48,17 @@
     color white
     text-transform uppercase
     
+    +below($mobile)
+      width 100%
+      
   &-title
     position relative
     padding 2.5rem 6rem 1rem
     font-size 1.75rem
     line-height 1
+
+    +below($mobile)
+      padding 2rem 2rem 1rem
     
     &:before
       position absolute
