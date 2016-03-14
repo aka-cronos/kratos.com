@@ -1,0 +1,27 @@
+form
+  margin-top 4rem
+
+  & input:not([type=submit])
+  & textarea
+    padding .5rem
+    border 0
+    margin-bottom 1.25rem
+    border-radius 4px
+    appearance none
+    color $grey
+    background-color $soft-grey
+    
+    &::placeholder
+      transform translateY(-5px)
+      position relative
+      font-size 13px
+      color $light-grey
+      font-style italic
+      
+  & .formItem
+    lost-column 1/3 3 no-flex
+
+  & .formSubject
+  & .formMessage
+    width 100%
+    

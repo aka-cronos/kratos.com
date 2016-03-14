@@ -1,0 +1,36 @@
+.sales
+  display flex
+  flex-direction column
+  padding 4rem 6rem
+  background-color rgba($soft-grey, .6)
+  
+  &-tel
+  &-mail
+  &-direction
+    position relative
+    color $grey
+    line-height 1.75
+    margin-top 0
+
+  &-tel:before
+    position absolute
+    top 5px
+    left -30px
+    content url('/img/sales-tel.png')
+      
+  &-direction:before
+    position absolute
+    top 5px
+    left -30px
+    content url('/img/sales-direction.png')
+
+  &-mail
+    display block
+    margin-bottom 1rem
+    text-decoration none
+  
+    &:before
+      position absolute
+      top 5px
+      left -30px
+      content url('/img/sales-mail.png')
