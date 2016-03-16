@@ -203,10 +203,15 @@ th {
   border: 0;
   list-style: none;
 }
-.text {
+.text,
+.text__white {
   color: #747577;
   line-height: 1.75;
   margin-top: 0;
+}
+.text__white,
+.text__white__white {
+  color: #fff;
 }
 .title {
   color: #4c4f55;
@@ -405,6 +410,11 @@ body {
     margin-bottom: 2rem;
   }
 }
+.logo__companyAbout {
+  display: block;
+  margin-bottom: 6rem;
+  width: 290px;
+}
 .mainNav {
   padding-left: calc(50% - (1120px / 2));
   padding-right: calc(50% - (1120px / 2));
@@ -501,8 +511,28 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+.sectionHeader.all-products {
+  background: url("/img/headers/all-products.jpg") center no-repeat;
+  background-size: cover;
+}
 .sectionHeader.long-products {
-  background: url("/img/products/header01.jpg") center no-repeat;
+  background: url("/img/headers/long-products.jpg") center no-repeat;
+  background-size: cover;
+}
+.sectionHeader.mesh {
+  background: url("/img/headers/mesh.jpg") center no-repeat;
+  background-size: cover;
+}
+.sectionHeader.fasteners {
+  background: url("/img/headers/fasteners.jpg") center no-repeat;
+  background-size: cover;
+}
+.sectionHeader.bar-supports {
+  background: url("/img/headers/bar-supports.jpg") center no-repeat;
+  background-size: cover;
+}
+.sectionHeader.concrete-accesories {
+  background: url("/img/headers/concrete-accesories.jpg") center no-repeat;
   background-size: cover;
 }
 .sectionHeader.careers {
@@ -511,6 +541,10 @@ body {
 }
 .sectionHeader.contact {
   background: url("/img/headers/contact.jpg") center no-repeat;
+  background-size: cover;
+}
+.sectionHeader.company {
+  background: url("/img/headers/company.jpg") center no-repeat;
   background-size: cover;
 }
 .headerDescription {
@@ -585,6 +619,14 @@ body {
   background: url("/img/mainSlide01.jpg") center no-repeat;
   background-size: cover;
 }
+.mainSlider-slide-02 {
+  background: url("/img/mainSlide02.jpg") center no-repeat;
+  background-size: cover;
+}
+.mainSlider-slide-03 {
+  background: url("/img/mainSlide03.jpg") center no-repeat;
+  background-size: cover;
+}
 .mainSlider-slideInfo {
   position: absolute;
   bottom: 0;
@@ -639,6 +681,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #fff;
+}
+.sectionContent__company {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .productsPreview {
   -webkit-flex: 0 0 auto;
@@ -1099,4 +1146,60 @@ form .formMessage {
   top: 5px;
   left: -30px;
   content: url("/img/sales-mail.png");
+}
+.companyAbout {
+  padding-left: calc(50% - (1120px / 2));
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 1rem;
+  width: 66.66%;
+  background: url("/img/company-about.jpg") center no-repeat;
+  background-size: cover;
+}
+.companyAbout-info p {
+  width: calc(99.99% * 1/2 - (16px - 16px * 1/2));
+}
+.companyAbout-info p:nth-child(1n) {
+  float: left;
+  margin-right: 16px;
+  clear: none;
+}
+.companyAbout-info p:last-child {
+  margin-right: 0;
+}
+.companyAbout-info p:nth-child(2n) {
+  margin-right: 0;
+  float: right;
+}
+.companyAbout-info p:nth-child(2n + 1) {
+  clear: left;
+}
+.companyAbout .btn {
+  margin-top: 1rem;
+}
+.companyContact {
+  width: 33.33%;
+}
+.companyContact-message,
+.companyContact-getQuote {
+  padding: 4rem 2rem;
+}
+.companyContact-message {
+  background-color: rgba(157,157,157,0.4);
+}
+.companyContact-message form {
+  margin-top: 0;
+}
+.companyContact-message form .formItem {
+  width: 100%;
+}
+.companyContact-getQuote {
+  background-color: #fff;
 }
