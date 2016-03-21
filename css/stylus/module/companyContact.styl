@@ -1,6 +1,9 @@
 .companyContact
   width 33.33%
   
+  +below($desktop)
+    width 100%
+  
   &-message
   &-getQuote
     padding 4rem 2rem
@@ -16,3 +19,9 @@
 
   &-getQuote
     background-color white
+    
+    +below($desktop)
+      text-align center
+      
+      .btn
+        transform translateX(-15px)

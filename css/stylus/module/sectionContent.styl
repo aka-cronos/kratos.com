@@ -9,10 +9,16 @@
     wrapped-left()
     display flex
     background-color white
+      
+    +below($mobile)
+      flex-direction column
     
   &__company
     display flex
-  
+    
+    +below($desktop)
+      flex-direction column
+
 .productsPreview
   lost-column 3/4 0 flex
 
@@ -24,5 +30,14 @@
   padding-top 4rem
   padding-bottom 4rem
   
+  +below($desktop)
+    wrapped(90%)
+
+  +below($mobile)
+    lost-column 1 1 0 flex
+
 .sales
   lost-column 2/5 0 flex
+  
+  +below($mobile)
+    lost-column 1 1 0 flex
