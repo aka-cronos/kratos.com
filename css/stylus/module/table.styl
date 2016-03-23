@@ -1,0 +1,41 @@
+.table
+  lost-column 2/3 0
+  table-layout fixed
+  text-align center
+  
+  +below($desktop)
+    lost-column 1
+    margin-top 4rem
+  
+  th
+  td
+    padding-top .3rem
+    padding-bottom .3rem
+    
+.tableHead
+  color white
+  font-weight 700
+    
+  &__grey
+    background-color $grey
+    
+  &__yellow
+    background-color $yellow
+    
+.tableHead-title
+  text-transform uppercase
+  color $yellow
+  
+.tableContent
+  color $grey
+  font-size .9rem
+  
+  tr:nth-child(even)
+    background-color $soft-grey
+    
+  .cellGrey
+    background-color $soft-grey
+
+  .cellWhite
+    background-color white
+    

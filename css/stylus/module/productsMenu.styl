@@ -8,7 +8,6 @@
   background-color white
   
   &-item
-    lost-column 1/6 6 flex
     display block
     padding-bottom .5rem
     font-weight 700
@@ -17,10 +16,34 @@
     text-align center
     text-decoration none
     color $grey
-    border-bottom 5px solid rgba(@color, .5)
     transition 350ms all ease-in-out
     
+    +above($desktop)
+      lost-column 1/6 6 flex
+      border-bottom 5px solid rgba(@color, .5)
+
     &.active
     &:hover
       color $yellow
       border-bottom 5px solid @color
+      
+
+.productsMenu
+  +below($desktop)
+    flex-direction column
+    align-items center
+    padding 0
+    transition 300ms all ease-in-out
+
+    &:hover .productsMenu-item
+      display block
+
+.productsMenu-item
+  +below($desktop)
+    display none
+    padding-top 1rem
+    padding-bottom 1rem
+    width 100%
+  
+    &.active
+      display block

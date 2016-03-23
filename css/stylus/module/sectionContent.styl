@@ -5,6 +5,9 @@
   padding-bottom 4rem
   background-color white
   
+  +below($desktop)
+    flex-direction column
+
   &__contacts
     wrapped-left()
     display flex
@@ -21,9 +24,16 @@
 
 .productsPreview
   lost-column 3/4 0 flex
-
+  
+  +below($desktop)
+    lost-column 1 flex
+    order 1
+    
 .productsList
   lost-column 1/4 0 flex
+  
+  +below($desktop)
+    display none
   
 .careersContact
   lost-column 3/5 0 flex

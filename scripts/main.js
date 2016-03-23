@@ -5,4 +5,8 @@ $(document).ready(function() {
     nav: true,
     arrows: false
   });
+
+  // $('.productsMenu').click(function () {
+  //   $('.productsMenu').toggleClass('is-active');
+  // });
 });
