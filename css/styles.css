@@ -658,12 +658,21 @@ body {
   content: url("/img/logo-small__white.png");
 }
 .mainSlider-link {
+  position: relative;
   display: block;
   padding: 1rem 0 1rem 6rem;
   color: inherit;
   text-decoration: none;
   font-weight: 600;
   background-color: #4c4f55;
+}
+.mainSlider-link:after {
+  position: absolute;
+  top: 0.5rem;
+  right: 4.5rem;
+  content: url("/img/right-arrow__yellow.png");
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 .sectionContent {
   padding-left: calc(50% - (1120px / 2));
