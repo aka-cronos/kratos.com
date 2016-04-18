@@ -933,12 +933,12 @@ body {
     margin-bottom: 0;
   }
 }
-.productsPreview-item:hover {
-  background-color: #f7a800;
-}
 .productsPreview-item img {
   display: block;
   width: 100%;
+}
+a.productsPreview-item:hover {
+  background-color: #f7a800;
 }
 .productsPreview__home {
   display: -webkit-flex;
