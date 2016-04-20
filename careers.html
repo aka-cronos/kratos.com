@@ -71,14 +71,14 @@
       <h1 class="title">Join Our Team!</h1>
       <p class="text">If you would like to be part of our team, we invite you to fill out the form below and be added to our database. For more information, please send an email message to careers@kratosbp.com</p>
 
-      <form>
-        <input class="formItem" type="text" placeholder="Your Name Here">
-        <input class="formItem" type="mail" placeholder="Your email">
-        <input class="formItem" type="text" placeholder="Phone">
-        <input class="formItem" type="text" placeholder="Country">
-        <input class="formItem" type="text" placeholder="State">
-        <input class="formSubject" type="text" placeholder="Subject">
-        <textarea class="formMessage" placeholder="Your Message"></textarea>
+      <form action="careers-send-mail.php" method="post">
+        <input class="formItem" type="text" placeholder="Your Name Here" name="name">
+        <input class="formItem" type="mail" placeholder="Your email" name="email">
+        <input class="formItem" type="text" placeholder="Phone" name="phone">
+        <input class="formItem" type="text" placeholder="Country" name="country">
+        <input class="formItem" type="text" placeholder="State" name="state">
+        <input class="formSubject" type="text" placeholder="Subject" name="subject">
+        <textarea class="formMessage" placeholder="Your Message" name="message"></textarea>
         <button class="btn">Send Message</button>
       </form>
     </div>

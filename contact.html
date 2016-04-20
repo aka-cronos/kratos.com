@@ -69,15 +69,15 @@
         For more information, please send an email message to sales@kratosbp.com
       </p>
 
-      <form>
-        <input class="formItem" type="text" placeholder="Your Name Here">
-        <input class="formItem" type="mail" placeholder="Your email">
-        <input class="formItem" type="text" placeholder="Phone">
-        <input class="formItem" type="text" placeholder="Company">
-        <input class="formItem" type="text" placeholder="Country">
-        <input class="formItem" type="text" placeholder="State">
-        <input class="formSubject" type="text" placeholder="Subject">
-        <textarea class="formMessage" placeholder="Your Message"></textarea>
+      <form action="contact-send-mail.php" method="post">
+        <input class="formItem" type="text" placeholder="Your Name Here" name="name">
+        <input class="formItem" type="mail" placeholder="Your email" name="email">
+        <input class="formItem" type="text" placeholder="Phone" name="phone">
+        <input class="formItem" type="text" placeholder="Company" name="company">
+        <input class="formItem" type="text" placeholder="Country" name="country">
+        <input class="formItem" type="text" placeholder="State" name="state">
+        <input class="formSubject" type="text" placeholder="Subject" name="subject">
+        <textarea class="formMessage" placeholder="Your Message" name="message"></textarea>
         <button class="btn">Send Message</button>
       </form>
     </div>
