@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".mainSlider").unslider({delay:6e3,nav:!0,arrows:!1})});
+$(document).ready(function(){$(".mainSlider").unslider({autoplay:!1,delay:6e3,nav:!0,arrows:!1}),$("#mobileNav-trigger").click(function(){$(".mobileNav").toggleClass("is-active"),$(".mobileNav-dropdown").removeClass("is-active")}),$(".mobileNav-menuItem").click(function(){$(this).find(".mobileNav-dropdown").toggleClass("is-active")}),$(".mobileNav-backLink").click(function(){$(this).parent().removeClass("is-active")})});

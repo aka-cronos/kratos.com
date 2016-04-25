@@ -1,12 +1,28 @@
 $(document).ready(function() {
   $('.mainSlider').unslider({
-    // autoplay: true,
+    autoplay: false,
     delay: 6000,
     nav: true,
     arrows: false
   });
 
-  // $('.productsMenu').click(function () {
-  //   $('.productsMenu').toggleClass('is-active');
-  // });
+  // Trigger mobileNav
+  $('#mobileNav-trigger').click(function () {
+    $('.mobileNav').toggleClass('is-active');
+    $('.mobileNav-dropdown').removeClass('is-active');
+  });
+
+  // Trigger dropdown
+  $('.mobileNav-menuItem').click(function () {
+    $(this)
+      .find('.mobileNav-dropdown')
+      .toggleClass('is-active');
+  });
+
+  // Close dropdown
+  $('.mobileNav-backLink').click(function () {
+    $(this)
+      .parent()
+      .removeClass('is-active');
+  });
 });
