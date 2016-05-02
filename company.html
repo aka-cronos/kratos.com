@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kratos - Company</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <script>
+    function validateForm() {
+      var form = document.forms[0];
+
+      if (!(/^[a-zA-Z ]+$/.test(form["name"]))) {
+        return false;
+      }
+      if (!form["message"]) {
+        return false;
+      }
+
+      return true;
+    }
+    </script>
 </head>
 <body>
 
@@ -56,7 +70,7 @@
         <a class="mainMenu-link" href="/contact.html">Contact</a>
       </li>
     </ul>
-    
+
     <button id="mobileNav-trigger" class="mobileNav-trigger">
       <img src="/img/mobileNav-trigger.png" alt="">
     </button>
@@ -100,9 +114,9 @@
       <div class="companyContact-message">
         <h3 class="title title__white">Can´t find the product you need?</h3>
         <p class=" title title__small">Please let us know.</p>
-        <form action="company-send-mail.php" method="post">
-          <input class="formItem" type="text" placeholder="Your Name Here" name="name">
-          <textarea class="formMessage" placeholder="Your Message" name="message"></textarea>
+        <form action="company-send-mail.php" method="post" onsubmit="return validateForm();">
+          <input class="formItem" type="text" placeholder="Your Name Here" name="name" required>
+          <textarea class="formMessage" placeholder="Your Message" name="message" required></textarea>
           <button class="btn">Send Message</button>
         </form>
       </div>
