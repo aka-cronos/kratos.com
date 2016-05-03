@@ -9,15 +9,20 @@
   <script>
     function validateForm() {
       var form = document.forms[0];
+      var validates = true;
 
-      if (!(/^[a-zA-Z ]+$/.test(form["name"]))) {
-        return false;
+      if (!(/^[a-zA-Z ]+$/.test(form["name"].value))) {
+        form["name"].className = 'required';
+        document.getElementById("name-errors").textContent = 'Can only contain letters';
+        validates = false;
       }
-      if (!form["message"]) {
-        return false;
+      if (!form["message"].value) {
+        form["message"].className = 'required';
+        document.getElementById("message-errors").textContent = 'Can not be blank';
+        validates = false;
       }
 
-      return true;
+      return validates;
     }
     </script>
 </head>
@@ -115,7 +120,9 @@
         <h3 class="title title__white">Can´t find the product you need?</h3>
         <p class=" title title__small">Please let us know.</p>
         <form action="company-send-mail.php" method="post" onsubmit="return validateForm();">
+          <span id="name-errors"></span>
           <input class="formItem" type="text" placeholder="Your Name Here" name="name" required>
+          <span id="message-errors"></span>
           <textarea class="formMessage" placeholder="Your Message" name="message" required></textarea>
           <button class="btn">Send Message</button>
         </form>

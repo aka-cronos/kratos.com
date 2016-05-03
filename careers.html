@@ -9,28 +9,41 @@
   <script>
     function validateForm() {
       var form = document.forms[0];
+      var validates = true;
 
-      if (!(/^[a-zA-Z ]+$/.test(form["name"]))) {
-        return false;
+      if (!(/^[a-zA-Z ]+$/.test(form["name"].value))) {
+        form["name"].className = 'required';
+        document.getElementById("name-errors").textContent = 'Can only contain letters';
+        validates = false;
       }
       var email = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
-      if (!(email.test(form["mail"]))) {
-        return false;
+      if (!(email.test(form["email"].value))) {
+        form["email"].className = 'required';
+        document.getElementById("mail-errors").textContent = 'Must be a valid email';
+        validates = false;
       }
-      if (!form["country"]) {
-        return false;
+      if (!form["country"].value) {
+        form["country"].className = 'required';
+        document.getElementById("country-errors").textContent = 'Can not be blank';
+        validates = false;
       }
-      if (!form["state"]) {
-        return false;
+      if (!form["state"].value) {
+        form["state"].className = 'required';
+        document.getElementById("state-errors").textContent = 'Can not be blank';
+        validates = false;
       }
-      if (!form["subject"]) {
-        return false;
+      if (!form["subject"].value) {
+        form["subject"].className = 'required';
+        document.getElementById("subject-errors").textContent = 'Can not be blank';
+        validates = false;
       }
-      if (!form["message"]) {
-        return false;
+      if (!form["message"].value) {
+        form["message"].className = 'required';
+        document.getElementById("message-errors").textContent = 'Can not be blank';
+        validates = false;
       }
 
-      return true;
+      return validates;
     }
     </script>
 </head>
@@ -103,12 +116,19 @@
       <p class="text">If you would like to be part of our team, we invite you to fill out the form below and be added to our database. For more information, please send an email message to careers@kratosbp.com</p>
 
       <form action="careers-send-mail.php" method="post" onsubmit="return validateForm();">
+        <span id="name-errors"></span>
         <input class="formItem" type="text" placeholder="Your Name Here" name="name" required>
+        <span id="email-errors"></span>
         <input class="formItem" type="mail" placeholder="Your email" name="email" required>
+        <span id="phone-errors"></span>
         <input class="formItem" type="text" placeholder="Phone" name="phone">
+        <span id="country-errors"></span>
         <input class="formItem" type="text" placeholder="Country" name="country" required>
+        <span id="state-errors"></span>
         <input class="formItem" type="text" placeholder="State" name="state" required>
+        <span id="subject-errors"></span>
         <input class="formSubject" type="text" placeholder="Subject" name="subject" required>
+        <span id="message-errors"></span>
         <textarea class="formMessage" placeholder="Your Message" name="message" required></textarea>
         <button class="btn">Send Message</button>
       </form>
