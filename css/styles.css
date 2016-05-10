@@ -1338,9 +1338,9 @@ form {
 }
 form input:not([type=submit]),
 form textarea {
+  width: 100%;
   padding: 0.5rem;
   border: 0;
-  margin-bottom: 1.25rem;
   border-radius: 4px;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1388,6 +1388,7 @@ form textarea.has-error {
 }
 form .formItem {
   width: calc(99.99% * 1/3 - (16px - 16px * 1/3));
+  margin-bottom: 1.25rem;
 }
 form .formItem:nth-child(1n) {
   float: left;
@@ -1426,9 +1427,11 @@ form .formItem:nth-child(3n + 1) {
 }
 form .formSubject,
 form .formMessage {
+  margin-bottom: 1.25rem;
   width: 100%;
 }
 .error-validation {
+  margin-top: 0.25rem;
   float: left;
   font-weight: bold;
   font-size: 0.825rem;

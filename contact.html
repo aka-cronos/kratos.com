@@ -74,14 +74,31 @@
       </p>
 
       <form action="contact-send-mail.php" method="post" onsubmit="return validateForm();">
-        <input class="formItem" type="text" placeholder="Your Name Here" name="name" required>
-        <input class="formItem" type="mail" placeholder="Your email" name="mail" required>
-        <input class="formItem" type="text" placeholder="Phone" name="phone">
-        <input class="formItem" type="text" placeholder="Company" name="company" required>
-        <input class="formItem" type="text" placeholder="Country" name="country" required>
-        <input class="formItem" type="text" placeholder="State" name="state">
-        <input class="formSubject" type="text" placeholder="Subject" name="subject" required>
-        <textarea class="formMessage" placeholder="Your Message" name="message" required></textarea>
+        <div class="formItem">
+          <input type="text" placeholder="Your Name Here*" name="name" required>
+        </div>
+        <div class="formItem">
+          <input type="mail" placeholder="Your email*" name="mail" required>
+        </div>
+        <div class="formItem">
+          <input type="text" placeholder="Phone" name="phone">
+        </div>
+        <div class="formItem">
+          <input type="text" placeholder="Company*" name="company" required>
+        </div>
+        <div class="formItem">
+          <input type="text" placeholder="Country*" name="country" required>
+        </div>
+        <div class="formItem">
+          <input type="text" placeholder="State" name="state">
+        </div>
+        <div class="formSubject">
+          <input type="text" placeholder="Subject*" name="subject" required>
+        </div>
+        <div class="formMessage">
+          <textarea placeholder="Your Message*" name="message" required></textarea>
+        </div>
+        
         <button class="btn">Send Message</button>
       </form>
     </div>

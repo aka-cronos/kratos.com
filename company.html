@@ -101,8 +101,12 @@
         <h3 class="title title__white">Can´t find the product you need?</h3>
         <p class=" title title__small">Please let us know.</p>
         <form action="company-send-mail.php" method="post" onsubmit="return validateForm();">
-          <input class="formItem" type="mail" placeholder="Your email" name="mail" required>
-          <textarea class="formMessage" placeholder="Your Message" name="message" required></textarea>
+          <div class="formItem" >
+            <input type="mail" placeholder="Your email" name="mail" required>
+          </div>
+          <div class="formMessage">
+            <textarea placeholder="Your Message" name="message" required></textarea>
+          </div>
           <button class="btn">Send Message</button>
         </form>
       </div>
