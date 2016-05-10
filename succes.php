@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kratos - Careers</title>
+  <title>Kratos</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
       <img src="/img/logo__mainNav.png" alt="Kratos">
     </a>
 
-    <ul class="mainMenu">
+    <ul id="mainMenu" class="mainMenu">
       <li class="mainMenu-item">
         <a class="mainMenu-link" href="/products/">Products</a>
         <ul class="mainMenu-dropdown">
@@ -35,7 +35,7 @@
           </li>
 
           <li class="mainMenu-dropdownItem">
-            <a class="mainMenu-dropdownLink" href="/products/concrete-accessories/">Concrete Accesories</a>
+            <a class="mainMenu-dropdownLink" href="/products/concrete-accessories/">Concrete Accessories</a>
           </li>
 
           <li class="mainMenu-dropdownItem">
@@ -45,7 +45,7 @@
       </li>
 
       <li class="mainMenu-item">
-        <a class="mainMenu-link active" href="/careers.html">Careers</a>
+        <a class="mainMenu-link" href="/careers.html">Careers</a>
       </li>
 
       <li class="mainMenu-item">
@@ -56,53 +56,40 @@
         <a class="mainMenu-link" href="/contact.html">Contact</a>
       </li>
     </ul>
-    
+
     <button id="mobileNav-trigger" class="mobileNav-trigger">
       <img src="/img/mobileNav-trigger.png" alt="">
     </button>
   </nav>
 
-  <header class="sectionHeader careers">
-    <div class="headerDescription">
-      <h2 class="headerDescription-title">
-        Build <br> a great <br> team. <br>Apply now.
-      </h2>
-    </div>
-  </header>
+  <section class="form-confirmation">
+    <h3 class="title title__red title__big">
+      Thank You! <br>
+      We have received your information
+    </h3>
 
-  <section class="sectionContent__contacts">
-    <div class="careersContact">
-      <h1 class="title">Join Our Team!</h1>
-      <p class="text">If you would like to be part of our team, we invite you to fill out the form below and be added to our database. For more information, please send an email message to careers@kratosbp.com</p>
 
-      <form action="careers-send-mail.php" method="post" onsubmit="return validateForm();">
-        <input class="formItem" type="text" placeholder="Your Name Here" name="name" required>
-        <input class="formItem" type="mail" placeholder="Your email" name="email" required>
-        <input class="formItem" type="text" placeholder="Phone" name="phone">
-        <input class="formItem" type="text" placeholder="Country" name="country" required>
-        <input class="formItem" type="text" placeholder="State" name="state" required>
-        <input class="formSubject" type="text" placeholder="Subject" name="subject" required>
-        <textarea class="formMessage" placeholder="Your Message" name="message" required></textarea>
-        <button class="btn">Send Message</button>
-      </form>
-    </div>
+    <?php
+      // el valor default que toma si no hay query param, 
+      // ej si llegan direto a esta pagina.
+      $redirect_to = "index.html"; 
 
-    <aside class="sales">
-      <h3 class="title title__small">Sales</h3>
-      <p class="sales-tel">(847) 387 4108</p>
-      <a class="sales-mail" href="#">careers@kratosbp.com</a>
-      <p class="sales-direction">
-        Ponce de León Blvd. <br>
-        Suite 1225 Coral Gables FL <br>
-        US 33134
-      </p>
-    </aside>
+      if (isset($_GET["back"])) {
+        $redirect_to = "contact/".$_GET["back"].".html";
+      }
+    ?>
+    <a class="btn btn__large btn__red-onWhite btn__translate" href="/<?php echo $redirect_to; ?>">Back</a>
+  </section>
 
+  <section class="homeActions">
+    <a href="/careers.html" class="homeActions-careers">
+    Careers <br> <span>Featured <br>Job Opportunities <br>in kratos.</span></a>
+    <a href="/contact.html" class="homeActions-contact">For more details <br>on lead time offerings <br><span>contact us</span> <img src="/img/icon-mail.png" alt=""> </a>
   </section>
 
   <footer>
     <nav class="footerNav">
-      <a href="" class="logo__footer">
+      <a href="/" class="logo__footer">
         <img src="/img/logo__footer.png" alt="Kratos">
       </a>
 
@@ -151,7 +138,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="/scripts/unslider.min.js"></script>
-  <script src="/scripts/form-validations.js"></script>
   <script src="/scripts/main.js"></script>
 </body>
 </html>

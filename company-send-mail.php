@@ -31,7 +31,7 @@ $mail->Body = "Nombre: $name<br />Comentarios: $comments";
 $mail->AltBody = "Nombre: $name\nComentarios: $comments";
 
 if(!$mail->send()) {
-  header('Location: careers.html?error=' . $mail->ErrorInfo );
+  header('Location: error.html?error=' . $mail->ErrorInfo );
 } else {
   header('Location: success.php?back=company' );
 }

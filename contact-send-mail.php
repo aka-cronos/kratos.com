@@ -37,7 +37,7 @@ $mail->AltBody = "Nombre: $name\nCorreo: $email\nTelefono: $phone\n" .
   "Empresa: $company\nPais: $country\nEstado: $estado\nComentarios: $comments";
 
 if(!$mail->send()) {
-  header('Location: contact.html?error=' . $mail->ErrorInfo );
+  header('Location: error.html?error=' . $mail->ErrorInfo );
 } else {
   header('Location: success.php?back=contact' );
 }

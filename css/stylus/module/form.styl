@@ -18,9 +18,12 @@ form
       color $light-grey
       font-style italic
       
+    &.has-error
+      border 1px solid $yellow
+
   & .formItem
     lost-column 1/3 3 no-flex
-    
+
     +below($tablet)
       lost-column 1 1 no-flex
 
@@ -28,3 +31,8 @@ form
   & .formMessage
     width 100%
     
+.error-validation
+  float left
+  font-weight bold
+  font-size .825rem
+  color $dark-grey

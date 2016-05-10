@@ -36,7 +36,7 @@ $mail->AltBody = "Nombre: $name\nCorreo: $email\nTelefono: $phone\n" .
   "Pais: $country\nEstado: $estado\nComentarios: $comments";
 
 if(!$mail->send()) {
-  header('Location: careers.html?error=' . $mail->ErrorInfo );
+  header('Location: error.html?error=' . $mail->ErrorInfo );
 } else {
   header('Location: success.php?back=careers' );
 }
