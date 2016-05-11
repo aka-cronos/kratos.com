@@ -244,6 +244,9 @@ th {
   -webkit-transform: translateX(-15px);
           transform: translateX(-15px);
 }
+.btn__submit {
+  display: block;
+}
 .btn:hover {
   background-color: #4c4f55;
 }
@@ -1333,11 +1336,70 @@ footer {
   color: inherit;
   text-decoration: none;
 }
-form {
+.form:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.form {
   margin-top: 4rem;
 }
-form input:not([type=submit]),
-form textarea {
+.formItem:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.formItem {
+  width: calc(99.99% * 1/3 - (16px - 16px * 1/3));
+  margin-bottom: 1rem;
+}
+.formItem:nth-child(1n) {
+  float: left;
+  margin-right: 16px;
+  clear: none;
+}
+.formItem:last-child {
+  margin-right: 0;
+}
+.formItem:nth-child(3n) {
+  margin-right: 0;
+  float: right;
+}
+.formItem:nth-child(3n + 1) {
+  clear: left;
+}
+@media only screen and (max-width: 800px) {
+  .formItem {
+    width: calc(99.99% * 1 - (16px - 16px * 1));
+  }
+  .formItem:nth-child(1n) {
+    float: left;
+    margin-right: 16px;
+    clear: none;
+  }
+  .formItem:last-child {
+    margin-right: 0;
+  }
+  .formItem:nth-child(undefinedn) {
+    margin-right: 0;
+    float: right;
+  }
+  .formItem:nth-child(undefinedn + 1) {
+    clear: left;
+  }
+}
+.formSubject:after,
+.formMessage:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.formSubject,
+.formMessage {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.formItem-input {
   width: 100%;
   padding: 0.5rem;
   border: 0;
@@ -1348,8 +1410,7 @@ form textarea {
   color: #747577;
   background-color: #eee;
 }
-form input:not([type=submit])::-webkit-input-placeholder,
-form textarea::-webkit-input-placeholder {
+.formItem-input::-webkit-input-placeholder {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   position: relative;
@@ -1357,24 +1418,21 @@ form textarea::-webkit-input-placeholder {
   color: #9d9d9d;
   font-style: italic;
 }
-form input:not([type=submit])::-moz-placeholder,
-form textarea::-moz-placeholder {
+.formItem-input::-moz-placeholder {
   transform: translateY(-5px);
   position: relative;
   font-size: 13px;
   color: #9d9d9d;
   font-style: italic;
 }
-form input:not([type=submit]):-ms-input-placeholder,
-form textarea:-ms-input-placeholder {
+.formItem-input:-ms-input-placeholder {
   transform: translateY(-5px);
   position: relative;
   font-size: 13px;
   color: #9d9d9d;
   font-style: italic;
 }
-form input:not([type=submit])::placeholder,
-form textarea::placeholder {
+.formItem-input::placeholder {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   position: relative;
@@ -1382,56 +1440,10 @@ form textarea::placeholder {
   color: #9d9d9d;
   font-style: italic;
 }
-form input:not([type=submit]).has-error,
-form textarea.has-error {
+.formItem-input.has-error {
   border: 1px solid #f7a800;
 }
-form .formItem {
-  width: calc(99.99% * 1/3 - (16px - 16px * 1/3));
-  margin-bottom: 1.25rem;
-}
-form .formItem:nth-child(1n) {
-  float: left;
-  margin-right: 16px;
-  clear: none;
-}
-form .formItem:last-child {
-  margin-right: 0;
-}
-form .formItem:nth-child(3n) {
-  margin-right: 0;
-  float: right;
-}
-form .formItem:nth-child(3n + 1) {
-  clear: left;
-}
-@media only screen and (max-width: 800px) {
-  form .formItem {
-    width: calc(99.99% * 1 - (16px - 16px * 1));
-  }
-  form .formItem:nth-child(1n) {
-    float: left;
-    margin-right: 16px;
-    clear: none;
-  }
-  form .formItem:last-child {
-    margin-right: 0;
-  }
-  form .formItem:nth-child(1n) {
-    margin-right: 0;
-    float: right;
-  }
-  form .formItem:nth-child(1n + 1) {
-    clear: left;
-  }
-}
-form .formSubject,
-form .formMessage {
-  margin-bottom: 1.25rem;
-  width: 100%;
-}
 .error-validation {
-  margin-top: 0.25rem;
   float: left;
   font-weight: bold;
   font-size: 0.825rem;
