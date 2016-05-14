@@ -19,27 +19,28 @@ $mail->SMTPSecure = "$mail_security";
 $mail->Port = $mail_port;
 $mail->setFrom('contact-form@kratos.com', 'Contact Form');
 
-$mail->addAddress('contact@kratos.com');
+$mail->addAddress('jorge@tonico.mx');
 
 $subject = $_POST["subject"];
 $name = $_POST["name"];
-$email = $_POST["email"];
+$email = $_POST["mail"];
 $phone = $_POST["phone"];
 $company = $_POST["company"];
 $country = $_POST["country"];
 $state = $_POST["state"];
 $comments = $_POST["message"];
 
-$mail->Subject = $subject;
+$mail->Subject = "$name has sent you a message";
 $mail->Body = "Nombre: $name<br />Correo: $email<br />Telefono: $phone<br />" .
   "Empresa: $company<br/ >Pais: $country<br />Estado: $estado<br />Comentarios: $comments";
 $mail->AltBody = "Nombre: $name\nCorreo: $email\nTelefono: $phone\n" .
   "Empresa: $company\nPais: $country\nEstado: $estado\nComentarios: $comments";
 
 if(!$mail->send()) {
-  header('Location: error.html?error=' . $mail->ErrorInfo );
+  header('Location: error.php?back=contact');
 } else {
   header('Location: success.php?back=contact' );
 }
+
 
 ?>

@@ -73,13 +73,13 @@
     <?php
       // el valor default que toma si no hay query param, 
       // ej si llegan direto a esta pagina.
-      $redirect_to = "index.html"; 
+      $redirect_to = "/index.html"; 
 
       if (isset($_GET["back"])) {
-        $redirect_to = "contact/".$_GET["back"].".html";
+        $redirect_to = "/".$_GET["back"].".html";
       }
     ?>
-    <a class="btn btn__large btn__red-onWhite btn__translate" href="/<?php echo $redirect_to; ?>">Back</a>
+    <a class="btn btn__large btn__red-onWhite btn__translate" href="<?php echo $redirect_to; ?>">Back</a>
   </section>
 
   <section class="homeActions">

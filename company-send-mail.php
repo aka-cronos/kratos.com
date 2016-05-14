@@ -1,6 +1,6 @@
 <?php
 
-if (empty($_POST['name'])) {
+if (empty($_POST['mail'])) {
   header('Location: company.html');
   exit;
 }
@@ -19,19 +19,17 @@ $mail->SMTPSecure = "$mail_security";
 $mail->Port = $mail_port;
 $mail->setFrom('contact-form@kratos.com', 'Contact Form');
 
-$mail->addAddress('company@kratos.com');
+$mail->addAddress('jorge@tonico.mx');
 
-// $mail->addAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
-
-$name = $_POST["name"];
+$email = $_POST["mail"];
 $comments = $_POST["message"];
 
-$mail->Subject = "$name has sent you a message";
-$mail->Body = "Nombre: $name<br />Comentarios: $comments";
-$mail->AltBody = "Nombre: $name\nComentarios: $comments";
+$mail->Subject = "$email has sent you a message";
+$mail->Body = "Mail: $email<br />Comentarios: $comments";
+$mail->AltBody = "Mail: $email\nComentarios: $comments";
 
 if(!$mail->send()) {
-  header('Location: error.html?error=' . $mail->ErrorInfo );
+  header('Location: error.php?back=company');
 } else {
   header('Location: success.php?back=company' );
 }
