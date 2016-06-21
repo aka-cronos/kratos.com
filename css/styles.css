@@ -603,7 +603,6 @@ body {
       align-items: flex-end;
   padding: 2.5rem 6rem;
   height: 250px;
-  width: 500px;
   background-color: rgba(255,255,255,0.7);
 }
 @media only screen and (max-width: 600px) {
@@ -689,7 +688,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 400px;
+  max-width: 500px;
   background-color: rgba(247,168,0,0.85);
   color: #fff;
   text-transform: uppercase;
