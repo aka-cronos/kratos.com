@@ -1134,7 +1134,8 @@ a.productsPreview-item:hover {
   color: #fff;
   background-color: #f7a800;
 }
-.productsList-item {
+.productsList-item,
+.productsList-subItem {
   display: block;
   margin-bottom: 0.5rem;
   padding-left: 2rem;
@@ -1144,8 +1145,14 @@ a.productsPreview-item:hover {
   transition: 300ms all ease-in-out;
 }
 .productsList-item.active,
-.productsList-item:hover {
+.productsList-subItem.active,
+.productsList-item:hover,
+.productsList-subItem:hover {
   color: #f7a800;
+}
+.productsList-subItem {
+  font-size: 0.825rem;
+  padding-left: 4rem;
 }
 .productsMenu {
   padding-left: calc(50% - (1120px / 2));
